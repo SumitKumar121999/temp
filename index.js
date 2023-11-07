@@ -1,12 +1,15 @@
-// server.js
-const express = require('express');
-const app = express();
-const PORT = 3000;
+var express = require('express');
+var app = express();
 
-// Serve static files from the "public" directory
-app.use(express.static('public'));
-
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.get('/', function (req, res) {
+    res.send('{ "response": "Hello From Thetips4you" }');
 });
+
+app.get('/will', function (req, res) {
+    res.send('{ "response": "Hello World" }');
+});
+app.get('/ready', function (req, res) {
+    res.send('{ "response": " Great!, It works!" }');
+});
+app.listen(process.env.PORT || 3000);
+module.exports = app;
