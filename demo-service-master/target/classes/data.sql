@@ -1,1 +1,0 @@
-INSERT INTO Users (user_id,email,name) VALUES (1000,'nsingla85@gmail.com','nitish');
